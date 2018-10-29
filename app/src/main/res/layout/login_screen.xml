@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="person"
+                  type="com.example.srikant.apishitting.login.model.LoginDetails"
+        />
+    </data>
+    <android.support.constraint.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:id="@+id/usernameETC"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintBottom_toTopOf="@id/passwordETC"
+                app:layout_constraintTop_toTopOf="parent">
+            <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/usernameET"
+                    android:hint="@string/username"
+                    android:text="@={person.userName}"
+            />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/passwordETC"
+                app:layout_constraintStart_toStartOf="@id/usernameETC"
+                app:layout_constraintEnd_toEndOf="@id/usernameETC"
+                app:layout_constraintBottom_toTopOf="@id/loginBtn"
+                app:layout_constraintTop_toBottomOf="@id/usernameETC">
+            <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/passwordET"
+                    android:hint="@string/password"
+                    android:text="@={person.password}"
+                    android:inputType="textPassword"
+            />
+        </android.support.design.widget.TextInputLayout>
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:layout_marginTop="24dp"
+                android:id="@+id/loginBtn"
+                android:background="@color/colorAccent"
+                app:layout_constraintTop_toBottomOf="@id/passwordETC"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/passwordETC"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
