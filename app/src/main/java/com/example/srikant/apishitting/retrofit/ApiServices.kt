@@ -1,6 +1,7 @@
 package com.example.srikant.apishitting.retrofit
 
 import com.example.srikant.apishitting.home.model.ConfigModel
+import com.example.srikant.apishitting.home.model.ConfigResponse
 import com.example.srikant.apishitting.login.model.LoginDetails
 import com.example.srikant.apishitting.login.model.LoginResponse
 import okhttp3.RequestBody
@@ -16,5 +17,5 @@ interface ApiServices {
     fun validateUser(@Body requestBody:LoginDetails):Call<LoginResponse>
 
     @GET("/config")
-    fun getConfig():Call<ConfigModel>
+    fun getConfig():Call<ConfigResponse>
 }

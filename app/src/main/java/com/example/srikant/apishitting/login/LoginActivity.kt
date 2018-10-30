@@ -1,24 +1,24 @@
 package com.example.srikant.apishitting.login
 
-import android.content.Context
 import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import com.example.srikant.apishitting.App
-import com.example.srikant.apishitting.Constants
-import com.example.srikant.apishitting.MainActivity
+import com.example.srikant.apishitting.home.MainActivity
 import com.example.srikant.apishitting.R
+import com.example.srikant.apishitting.base.BaseActivity
 import com.example.srikant.apishitting.databinding.LoginScreenBinding
 import com.example.srikant.apishitting.login.model.LoginDetails
 import com.example.srikant.apishitting.login.model.LoginResponse
+import com.example.srikant.apishitting.login.presenter.LoginPresenter
+import com.example.srikant.apishitting.login.view.ILoginView
 import com.example.srikant.apishitting.retrofit.LoginService
 import com.example.srikant.apishitting.retrofit.RetrofitCallback
 import com.example.srikant.apishitting.retrofit.RetrofitInstance
 import retrofit2.Response
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity(),ILoginView<LoginPresenter> {
     var loginDetails: LoginDetails? = null
     var loginService = LoginService(RetrofitInstance.getRetrofitInstance())
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,11 +1,9 @@
 package com.example.srikant.apishitting.retrofit
 
-import com.example.srikant.apishitting.home.model.ConfigModel
-import com.example.srikant.apishitting.login.model.LoginDetails
-import com.example.srikant.apishitting.login.model.LoginResponse
+import com.example.srikant.apishitting.home.model.ConfigResponse
 
 class UserServices(private var apiServices: ApiServices) {
-    fun getConfig(callback: RetrofitCallback<ConfigModel>){
+    fun getConfig(callback: RetrofitCallback<ConfigResponse>){
         apiServices.getConfig().enqueue(callback)
     }
 }
