@@ -1,4 +1,4 @@
-package com.example.srikant.apishitting.home.java_model;
+package com.example.srikant.apishitting.user.java_model;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteStatement;

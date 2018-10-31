@@ -1,4 +1,4 @@
-package com.example.srikant.apishitting.home.java_model;
+package com.example.srikant.apishitting.user.java_model;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -21,14 +21,16 @@ public class DaoMaster extends AbstractDaoMaster {
 
     /** Creates underlying database table using DAOs. */
     public static void createAllTables(Database db, boolean ifNotExists) {
-        UserDetailsDao.createTable(db, ifNotExists);
         LocationDbModelDao.createTable(db, ifNotExists);
+        UserDetailsDao.createTable(db, ifNotExists);
+        HouseDao.createTable(db, ifNotExists);
     }
 
     /** Drops underlying database table using DAOs. */
     public static void dropAllTables(Database db, boolean ifExists) {
-        UserDetailsDao.dropTable(db, ifExists);
         LocationDbModelDao.dropTable(db, ifExists);
+        UserDetailsDao.dropTable(db, ifExists);
+        HouseDao.dropTable(db, ifExists);
     }
 
     /**
@@ -47,8 +49,9 @@ public class DaoMaster extends AbstractDaoMaster {
 
     public DaoMaster(Database db) {
         super(db, SCHEMA_VERSION);
-        registerDaoClass(UserDetailsDao.class);
         registerDaoClass(LocationDbModelDao.class);
+        registerDaoClass(UserDetailsDao.class);
+        registerDaoClass(HouseDao.class);
     }
 
     public DaoSession newSession() {

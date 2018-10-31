@@ -1,7 +1,6 @@
-package com.example.srikant.apishitting.home.java_model;
+package com.example.srikant.apishitting.user.java_model;
 
 import com.google.gson.annotations.SerializedName;
-import org.greenrobot.greendao.annotation.Entity;
 
 public class Language {
 

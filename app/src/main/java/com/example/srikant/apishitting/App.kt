@@ -3,8 +3,8 @@ package com.example.srikant.apishitting
 import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
-import com.example.srikant.apishitting.home.java_model.DaoMaster
-import com.example.srikant.apishitting.home.java_model.DaoSession
+import com.example.srikant.apishitting.user.java_model.DaoMaster
+import com.example.srikant.apishitting.user.java_model.DaoSession
 
 class App:Application() {
 

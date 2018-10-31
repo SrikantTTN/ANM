@@ -1,8 +1,8 @@
-package com.example.srikant.apishitting.home.model
+package com.example.srikant.apishitting.user.model
 
-import com.example.srikant.apishitting.home.java_model.Language
-import com.example.srikant.apishitting.home.java_model.Location
-import com.example.srikant.apishitting.home.java_model.UserDetails
+import com.example.srikant.apishitting.user.java_model.Language
+import com.example.srikant.apishitting.user.java_model.Location
+import com.example.srikant.apishitting.user.java_model.UserDetails
 import com.google.gson.annotations.SerializedName
 
 class ConfigModel {

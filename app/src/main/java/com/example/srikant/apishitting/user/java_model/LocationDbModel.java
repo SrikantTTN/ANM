@@ -1,10 +1,9 @@
-package com.example.srikant.apishitting.home.java_model;
+package com.example.srikant.apishitting.user.java_model;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.ToOne;
 
 
 @Entity(nameInDb = "Anganwadi")
@@ -36,6 +35,9 @@ public class LocationDbModel {
 
     @Id
     private Long anganwadiId;
+
+    private String anganwadiName;
+
 
     public Integer getStateId() {
         return stateId;
@@ -149,7 +151,6 @@ public class LocationDbModel {
         this.anganwadiName = anganwadiName;
     }
 
-    private String anganwadiName;
 
     @Generated(hash = 2103810425)
     public LocationDbModel(Integer stateId, String stateName, Integer districtId,

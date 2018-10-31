@@ -1,4 +1,4 @@
-package com.example.srikant.apishitting.home.java_model;
+package com.example.srikant.apishitting.user.java_model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
